@@ -1,0 +1,121 @@
+===================================================================================================================================
+				A SIMPLE CHEAT SHEET FOR BEGINNERS WANTING TO LEARN THE ROPES IN USING THE LINUX TERMINAL aka 
+								PROGRAMMER'S HOLY GRAIL
+===================================================================================================================================
+
+on your computer, open the terminal using the main menu or ctrl+Alt+T and lets dive in ( all commands will be preceeded by >> but should not
+be typed on the terminal. Its only for differentiation purposes)
+
+NAVIGATION 
+
+This is referred to as changing directories and uses the command cd to navigate into a folder
+example, to navigate into a directory called Watches and this directory is within the current directory, type 
+>>cd Watches
+
+VIEWING(ls-list)
+
+To view the contents of the current directory, type
+>>ls 
+if looking for contents in a particular folder X, you can do ls and upon determining the folder is in the current directory, cd into the directory.
+SHORTCUT TO HOME
+
+after performing cd severally and wish to go home, as a shortcut, type
+>> cd ~
+MOVE UP ONE DIRECTORY
+
+if you are in level x and would like to go to level x-1 of your tree structure, type
+>>cd ..
+if you want to move 2 levels up, type 
+>>cd ../.. and so on
+DIR OPS
+
+To create a folder, type
+>> mkdir folder_name
+to create more than one folder,
+>> mkdir folder1 folder2
+DELETING A FOLDER OR FILE(rm-remove)
+
+for both, the same command is used but for a folder, certain parameters called flags are used
+to delete a file,
+>>rm file_name
+to delete a folder,
+>>rm -rf folder_name -r means recursively and thus, remove everything in the folder plus its self. ie, run the rm function recursively
+-f means forcefully
+RENAMING,COPYING OR MOVING A FILE OF FOLDER
+
+Both use the same command since logically, its the same thing
+RENAMING is the same as moving a file to a version of itself but with a different name for example,
+to rename a file from name1 to name2,
+>>mv name1 name2
+for a folder,
+>> mv foldername1/ foldername2
+For moving, actual migration from one place to another, the equivalent of cut and paste
+for a file,
+>>mv filename path/to/destination
+where the path can start from the root of the directory structure or the current working directory
+for a folder, the -r flag is used such that all the contents of the folder are moved.
+>>mv -r foldername1/ path/to/destination
+
+Copying is the same as copy and paste. exact same format as move but instead of mv, use cp
+for a file,
+>>cp filename path/to/destination
+where the path can start from the root of the directory structure or the current working directory
+for a folder, the -r flag is used such that all the contents of the folder are also copied.
+>>cp -r foldername1/ path/to/destination
+
+WHERE AM I?
+
+To know at what point of the directory structure you are in, type
+>>pwd
+which stands for Print Working Directory. This gives you the path to the current directory
+CREATING A FILE
+
+There are two ways using the terminal's editor called nano or using a more GUI like editor called gedit which comes with the OS
+to create a file using nano, you will be typing in the terminal and with gedit, on a new window
+for nano,
+>> nano file.txt
+for gedit,
+>>gedit file.txt
+
+VIEWING THE CONTENTS OF A FILE
+
+to view the contents of a simple file, one that can be viewed by an editor,type
+>>cat file_name
+to output the contents of the file or 2 or more files to a new file,
+>> cat file_name > newfile.txt
+or
+>> cat file1 file2 >newfile.txt
+FILE LISTING
+
+///////////////////internet stuff..grep and regex....file permissions curl commands check one note//////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
