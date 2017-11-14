@@ -86,6 +86,41 @@ to output the contents of the file or 2 or more files to a new file,
 or
 >> cat file1 file2 >newfile.txt
 FILE LISTING
+To view all files including hidden files,us the -a flag
+>>ls -a
+To get the long liat view of a file, ie, view ownership and permissions,
+>>ls -l file.txt
+To view the octal dump of a file, ie, the contents of a file in octal,
+>>od -c file.txt the -c flag is for count, it will count the number of characters in the file.
+Speaking of count, ever wondered of a way to determine the word count in a file? Say no more
+>> wc file.txt will do the trick
+Ever had a large file and are looking for a certain line with a certain word? The grep command helps you to find occurences of words in one or more files
+>> grep searchword file.txt 
+where searchword is the word youre looking for. To include the line number on which the word occurs, 
+>>grep -n searchword file.txt
+To search in every file in the current directory,
+>>grep -n searchword *
+
+FILE PERMISSIONS
+
+In the UNIX system, files have permissions where a file can be restricted to a certain group of people who can perform limited functions on a file.
+The functions are, Read (r) Write (w) and Execute(x).
+There are three permission classes. The owner(who created the file), the owner's group and others(users not in the owner's group)
+To assign permissions, the chmod(change mode) command is used. Symbolic representation is used to assign permissions.
+4-READ 
+2-WRITE 
+1-EXECUTE
+these numbers can be combined in any form to assign a desired permission or set of permissions eg, 7(4+2+1) gives all the permissions ie, the user or group can read,write and execute the file.
+by default, the owner gets all the permissions.
+in using chmod, the syntax is chmod followed by a 3 digit number which assigns permissions to the user, group and others respectifully.
+a common configuration is 754 where the owner has all permissions, the group can read and execute but cant write and the others can only execute.
+eg,
+>>chmod 761 file.txt 
+if upon doing an ls -l on a file you see a dash(-) this means that in its place, there is no assigned permission such as,
+-rw-rw-r-- 1 kimz kimz 262 Jul 26 16:26 token.txt.....user cant execute, same to group, others cant write or execute...can only read
+Lastly, before the permission symbols, a character is placed to identify a file type. if the character is a hyphen(-), the file is a normal, simple file.
+If it is a letter, the file in question is a special file handled by the OS in a special way. eg, a directory will have the letter d
+
 
 ///////////////////internet stuff..grep and regex....file permissions curl commands check one note//////////////////////
 
