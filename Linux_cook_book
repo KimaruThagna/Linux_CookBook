@@ -140,7 +140,7 @@ THe output of one grep can be the input of another, how you ask? PIPES
 for example, the example above, lets say in your output, you are not satisfied and want only words beginning in small letters.
 Hold onn to your hats
 >> grep q['^a'] usr/share/dict/words | grep ^[^A-Z]
-
+///////////////////internet stuff..grep and regex....file permissions curl commands check one note//////////////////////
 
 
 
