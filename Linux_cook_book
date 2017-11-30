@@ -120,6 +120,7 @@ if upon doing an ls -l on a file you see a dash(-) this means that in its place,
 -rw-rw-r-- 1 kimz kimz 262 Jul 26 16:26 token.txt.....user cant execute, same to group, others cant write or execute...can only read
 Lastly, before the permission symbols, a character is placed to identify a file type. if the character is a hyphen(-), the file is a normal, simple file.
 If it is a letter, the file in question is a special file handled by the OS in a special way. eg, a directory will have the letter d
+<<<<<<< HEAD
 
 GREP AND REGEX
 grep or egrep(extended grep) is a tool for finding ocuurences of words in a file or directory.
@@ -140,35 +141,4 @@ THe output of one grep can be the input of another, how you ask? PIPES
 for example, the example above, lets say in your output, you are not satisfied and want only words beginning in small letters.
 Hold onn to your hats
 >> grep q['^a'] usr/share/dict/words | grep ^[^A-Z]
-///////////////////internet stuff..grep and regex....file permissions curl commands check one note//////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
